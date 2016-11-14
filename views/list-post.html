@@ -1,0 +1,27 @@
+<h3>Posts List</h3>
+<div
+  infinite-scroll="vm.contents.nextPage()"
+  infinite-scroll-disabled="vm.contents.busy"
+  infinite-scroll-listen-for-event="refreshOutput"
+  infinite-scroll-distance="1">
+
+    <div ng-if="vm.restApiActive && vm.acfActive">
+
+      <div ng-repeat="item in vm.contents.items" class="animate-repeat">
+        <p>{{item.id}}</p>
+        <div ng-bind-html="item.title.rendered"></div>
+        <img ng-if="item.url_thumbnail.medium" ng-src="{{item.url_thumbnail.medium}}" alt="" />
+        <div ng-bind-html="item.content.rendered"></div>
+        <p>{{item.date}}</p>
+        <a href="#/posts/{{item.id}}">Ver</a>
+        <hr>
+      </div>
+
+    </div>
+
+    <div ng-if="!vm.restApiActive || !vm.acfActive">
+      <h4>Contacta con el administrador, algo está fallando y pueda serle útil</h4>
+      <p>Puede que necesite instalar o activar algún plugin</p>
+    </div>
+
+</div>

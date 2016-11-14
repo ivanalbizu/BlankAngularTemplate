@@ -1,0 +1,20 @@
+<div ng-if="vm.restApiActive && vm.acfActive">
+  <h3 ng-bind-html="vm.post.title.rendered"></h3>
+
+  <p>{{vm.post.id}}</p>
+  <div ng-bind-html="vm.post.title.rendered"></div>
+  <div class="gallery" gallery="{selector: '.image'}">
+      <div ng-repeat="url in vm.post.url_gallery">
+          <a href="{{url}}" class="image" title="{{url.title}}">
+              <img ng-src="{{url}}" />
+          </a>
+      </div>
+  </div>
+  <div ng-bind-html="vm.post.content.rendered"></div>
+
+</div>
+
+<div ng-if="!vm.restApiActive || !vm.acfActive">
+  <h4>Contacta con el administrador, algo está fallando y pueda serle útil</h4>
+  <p>Puede que necesite instalar o activar algún plugin</p>
+</div>

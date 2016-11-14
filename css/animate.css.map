@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;wBAGyB;EACrB,UAAU,EAAC,aAAa;EACxB,OAAO,EAAC,CAAC;EACT,SAAS,EAAE,UAAU;;AAGzB;;wCAEyC;EACrC,UAAU,EAAC,aAAa;EACxB,OAAO,EAAC,CAAC;EACT,SAAS,EAAE,QAAQ",
+"sources": ["../sass/animate.scss"],
+"names": [],
+"file": "animate.css"
+}
