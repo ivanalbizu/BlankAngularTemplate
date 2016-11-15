@@ -6,6 +6,9 @@
 global $theme_name;
 $theme_name = 'photo';
 
+foreach ( glob( get_template_directory() . '/lib/*/functions.php') as $lib_functions ) {
+	include_once( $lib_functions );
+}
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 //Se se quiere menus, descomentar
